@@ -36,6 +36,9 @@ Where:
   - Minimize autofluorescence by using consistent media or switching to PBS for imaging, as phenol red present in some media can increase background fluorescence.
 - **Media Consistency**: 
   - Ensure that the media used between plates is consistent to prevent variability in fluorescence measurements.
+  - 
+### Note for High Autofluorescence Analysis
+If your images exhibit high autofluorescence, particularly if taken with interfering light (e.g., without the dark cover on the microscope stage), use the "High Autofluorescence Macro" instead - this includes an extra step to adjust the threshold if necessary manually. The standard macro should be sufficient and more time efficient for images with normal autofluorescence.
 
 ## Output
 The macro generates:
