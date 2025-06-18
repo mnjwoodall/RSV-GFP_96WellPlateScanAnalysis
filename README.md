@@ -1,14 +1,16 @@
-# GFP Signal Analysis Macro for Vero Cells
+# Flourescent Signal Analysis Macro for Confluent Cell layers
 
 ## Overview
-This macro is designed to analyze GFP fluorescence intensity in Vero cells infected with RSV-GFP using images acquired from a Nikon Inverted Fluorescence Microscope at 4x magnification with full well scans. The macro processes `.nd2` image files, focusing on the FITC channel (GFP) and ignoring transmitted light. It assumes that the well is 100% confluent and helps estimate the viral titre based on control wells.
+This macro was originally designed to analyze GFP fluorescence intensity in Vero cells infected with RSV-GFP using images acquired from a Nikon Inverted Fluorescence Microscope at 4x magnification with full well scans. but it is broadly compatible with 96-well, 24-well, 12-well plates, and Transwell formats, as long as 1.) The cell culture is confluent 2.) The image contains a fluorescence signal that is independent of a transmitted light overlay.
+
+It is especially useful for estimating viral titre by comparing GFP-positive area across experimental and control wells. The macro processes `.nd2` image files, focusing on the FITC channel (GFP) and ignoring transmitted light. It assumes that the well is 100% confluent and helps estimate the viral titre based on control wells.
 
 ## Requirements
 - **Microscopy**: 
-  - Images should be acquired at 4x magnification with both transmitted light and GFP channels split.
+  - Images should be acquired at 4x magnification with splitable transmitted light and fluorescent marker channels.
   - `.nd2` files are compatible.
 - **Control Wells**: 
-  - A **virus-only control well** with a known viral titre for calibration.
+  - A **virus-only control well** with **a known viral titre for calibration**.
   - An **uninfected control well** (0 titre) to establish a baseline.
 
 ## Analysis Process
